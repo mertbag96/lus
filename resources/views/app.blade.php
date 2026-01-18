@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>{{ config('app.name', 'Laravel URL Shortener') }}</title>
 
         <!-- Styles / Scripts -->
         @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
@@ -15,15 +15,19 @@
             </style>
         @endif
     </head>
-    <body class="bg-primary text-dark font-sans antialiased min-h-screen p-6 lg:p-8 flex items-center justify-center">
-        <div class="text-center">
-            <h1 class="text-3xl font-semibold text-light">
-                Welcome to Laravel URL Shortener
-            </h1>
+    <body class="bg-light text-dark font-sans antialiased min-h-screen">
+        <!-- Header -->
+        @include('layouts.header')
 
-            <p class="mt-4 text-dark">
-                Create short, clean links in seconds.
-            </p>
-        </div>
+        <!-- Main -->
+        <main class="main container mx-auto p-12 w-full xl:w-1/2">
+            @yield('content')
+        </main>
+
+        <!-- Footer -->
+        @include('layouts.footer')
     </body>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script>lucide.createIcons();</script>
 </html>

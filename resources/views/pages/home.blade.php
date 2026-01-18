@@ -1,0 +1,65 @@
+@extends('app')
+
+@section('content')
+    <div class="text-center">
+        <h1 class="text-2xl md:text-4xl font-semibold text-primary">
+            Welcome to Laravel URL Shortener
+        </h1>
+
+        <p class="mt-4 mb-8 text-md md:text-lg text-dark">
+            With Laravel URL Shortener, shorten your links in seconds for free.
+        </p>
+
+        <div class="w-full bg-white border border-dark/10 p-6 mb-20 rounded-sm shadow-sm">
+            <h2 class="font-semibold text-dark text-xl md:text-2xl mb-4">Shorten your URLs easily</h2>
+
+            <form
+                method="POST"
+                class="w-full flex flex-col space-y-4"
+            >
+                @csrf
+
+                <input
+                    type="text"
+                    name="url"
+                    class="w-full border-2 border-dark/10 rounded-sm shadow-sm text-dark p-4 focus:border-primary focus:outline-none"
+                    placeholder="Enter the URL to be shortened"
+                    requrired
+                />
+
+                <button
+                    type="submit"
+                    class="w-full p-4 bg-primary border-2 border-primary rounded-sm shadow-sm font-semibold text-lg text-light hover:bg-primary/90 transition-colors duration-200 cursor-pointer"
+                >
+                    Shorten URL
+                </button>
+            </form>
+        </div>
+
+        <div class="px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="flex flex-col justify-center items-center space-y-2 text-center">
+                <i data-lucide="smile" class="w-12 h-12 text-dark/50"></i>
+
+                <h3 class="font-semibold text-dark text-xl">Easy</h3>
+
+                <p>Shorten your links instantly with a smooth, hassle-free experience built for everyone</p>
+            </div>
+
+            <div class="flex flex-col justify-center items-center space-y-2 text-center">
+                <i data-lucide="link" class="w-12 h-12 text-dark/50"></i>
+
+                <h3 class="font-semibold text-dark text-xl">Shortened</h3>
+
+                <p>Transform long URLs into sleek, powerful links that look great and share even better</p>
+            </div>
+
+            <div class="flex flex-col justify-center items-center space-y-2 text-center">
+                <i data-lucide="shield-check" class="w-12 h-12 text-dark/50"></i>
+
+                <h3 class="font-semibold text-dark text-xl">Secure</h3>
+
+                <p>Share with confidence — your links are protected by trusted, modern security standards</p>
+            </div>
+        </div>
+    </div>
+@endsection

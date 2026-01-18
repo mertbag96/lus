@@ -9,10 +9,13 @@
 
 @theme {
     --color-dark: #393E41;
-    --color-light: #F6F7EB;
+    --color-light: #F2F2F2;
     --color-danger: #B3001B;
     --color-success: #698F3F;
-    --color-primary: #3F88C5;
-    --color-secondary: #E94F37;
+    --color-primary: #E94F37;
     --font-sans: 'Ubuntu', ui-sans-serif, system-ui, sans-serif;
+}
+
+.main {
+    min-height: calc(100dvh - 120px);
 }
