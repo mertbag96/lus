@@ -14,10 +14,6 @@ Route::get('/', HomeController::class)
 Route::post('/shorten', [UrlController::class, 'store'])
     ->name('shorten-url');
 
-// Redirect URL
-Route::get('/{code}', [UrlController::class, 'redirect'])
-    ->name('redirect-url');
-
 // Terms of Use
 Route::get('/terms-of-use', [PageController::class, 'terms'])
     ->name('terms');
@@ -29,3 +25,7 @@ Route::get('/privacy-policy', [PageController::class, 'privacy'])
 // Contact
 Route::get('/contact', [ContactController::class, 'index'])
     ->name('contact');
+
+// Redirect URL
+Route::get('/{code}', [UrlController::class, 'redirect'])
+    ->name('redirect-url');
