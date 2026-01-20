@@ -24,7 +24,7 @@
                 </a>
 
                 <a
-                    href="{{ route('contact') }}"
+                    href="{{ route('contact.index') }}"
                     class="hover:underline"
                 >
                     Contact

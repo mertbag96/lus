@@ -24,7 +24,11 @@ Route::get('/privacy-policy', [PageController::class, 'privacy'])
 
 // Contact
 Route::get('/contact', [ContactController::class, 'index'])
-    ->name('contact');
+    ->name('contact.index');
+
+// Contact (Submit)
+Route::post('/contact', [ContactController::class, 'store'])
+    ->name('contact.store');
 
 // Redirect URL
 Route::get('/{code}', [UrlController::class, 'redirect'])

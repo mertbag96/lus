@@ -12,8 +12,8 @@
 
         <!-- Form -->
         <form
-            action="#"
             method="POST"
+            action="{{ route('contact.store') }}"
             class="w-full lg:w-[85%] space-y-4 bg-white border border-dark/10 p-6 rounded-sm shadow-sm"
         >
             @csrf
@@ -36,8 +36,17 @@
                     name="name"
                     class="w-full border-2 border-dark/10 rounded-md py-2 px-3 focus:outline-none focus:border-primary"
                     placeholder="Enter your name"
+                    value="{{ old('name') }}"
                     required
                 >
+
+                <div class="mt-1 ml-1">
+                    @error('name')
+                        <small class="font-medium text-xs text-primary">
+                            {{ $message }}
+                        </small>
+                    @enderror
+                </div>
             </div>
 
             <!-- Email -->
@@ -58,8 +67,17 @@
                     name="email"
                     class="w-full border-2 border-dark/10 rounded-md py-2 px-3 focus:outline-none focus:border-primary"
                     placeholder="Enter your email"
+                    value="{{ old('email') }}"
                     required
                 >
+
+                <div class="mt-1 ml-1">
+                    @error('email')
+                        <small class="font-medium text-xs text-primary">
+                            {{ $message }}
+                        </small>
+                    @enderror
+                </div>
             </div>
 
             <!-- Message -->
@@ -81,7 +99,15 @@
                     class="w-full border-2 border-dark/10 rounded-md py-2 px-3 resize-none focus:outline-none focus:border-primary"
                     placeholder="Enter your message"
                     required
-                ></textarea>
+                >{{ old('message') }}</textarea>
+
+                <div class="mt-1 ml-1">
+                    @error('message')
+                        <small class="font-medium text-xs text-primary">
+                            {{ $message }}
+                        </small>
+                    @enderror
+                </div>
             </div>
 
             <!-- Button -->
@@ -91,6 +117,12 @@
             >
                 Send Message
             </button>
+
+            @if (session('success'))
+                <div class="w-full bg-green-100 border border-green-200 rounded-sm shadow-xs p-4 mt-2.5 text-green-700 text-center">
+                    {{ session('success') }}
+                </div>
+            @endif
         </form>
     </div>
 @endsection
