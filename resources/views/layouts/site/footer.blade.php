@@ -4,9 +4,15 @@
         <div>
             <a
                 href="{{ route('home') }}"
-                class="font-semibold text-lg"
+                class="flex items-center space-x-1 font-semibold text-lg"
             >
-                {{ config('app.name') ?? 'LUS' }}
+                <!-- Icon -->
+                <i data-lucide="link" class="w-6 h-6 text-primary"></i>
+
+                <!-- Text -->
+                <span>
+                    {{ config('app.name') ?? 'LUS' }}
+                </span>
             </a>
         </div>
 
