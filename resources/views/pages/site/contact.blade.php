@@ -1,5 +1,7 @@
 @extends('app')
 
+@section('title', 'Contact')
+
 @section('content')
     <div class="px-4 py-8 bg-white border border-dark/20 rounded-lg shadow-sm flex flex-col justify-center items-center">
         <!-- Title -->

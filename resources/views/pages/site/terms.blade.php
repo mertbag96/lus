@@ -1,5 +1,7 @@
 @extends('app')
 
+@section('title', 'Terms of Use')
+
 @section('content')
     <!-- Terms of Use -->
     <div class="p-8 bg-white border border-dark/20 rounded-lg shadow-sm text-dark/90 text-sm">

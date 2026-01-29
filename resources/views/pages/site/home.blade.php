@@ -1,5 +1,7 @@
 @extends('app')
 
+@section('title', 'Shorten your URLs in seconds for free')
+
 @section('content')
     <!-- Hero -->
     <div class="relative overflow-hidden px-4 py-8 bg-white border border-dark/20 rounded-lg shadow-sm flex flex-col justify-center items-center text-center space-y-4">

@@ -1,5 +1,7 @@
 @extends('app')
 
+@section('title', 'Privacy Policy')
+
 @section('content')
     <!-- Privacu Policy -->
     <div class="p-8 bg-white border border-dark/20 rounded-lg shadow-sm text-dark/90 text-sm">
