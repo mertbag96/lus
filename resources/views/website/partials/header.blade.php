@@ -4,7 +4,7 @@
         <div>
             <a
                 href="{{ route('website.pages.home') }}"
-                class="flex items-center space-x-1 font-semibold text-lg"
+                class="flex items-center space-x-1 font-medium text-lg"
             >
                 <!-- Icon -->
                 <i data-lucide="link" class="w-6 h-6 text-primary"></i>
@@ -13,6 +13,7 @@
                 <span>
                     {{ config('app.name') ?? 'LUS' }}
                 </span>
+            </a>
         </div>
 
         <!-- Navigation -->
@@ -25,13 +26,23 @@
                 Contact
             </a>
 
-            <!-- Get Started -->
-            <a
-                href="{{ route('website.pages.home') }}"
-                class="bg-primary py-1 px-2 rounded-lg text-white hover:bg-red-600 transition-colors duration-200"
-            >
-                Get Started
-            </a>
+            @auth
+                <!-- Dashboard -->
+                <a
+                    href="{{ route('panel.dashboard') }}"
+                    class="bg-primary py-1 px-2 rounded-lg text-white hover:bg-red-600 transition-colors duration-200"
+                >
+                    Dashboard
+                </a>
+            @else
+                <!-- Get Started -->
+                <a
+                    href="{{ route('website.pages.auth.login') }}"
+                    class="bg-primary py-1 px-2 rounded-lg text-white hover:bg-red-600 transition-colors duration-200"
+                >
+                    Get Started
+                </a>
+            @endauth
         </nav>
     </div>
 </header>

@@ -31,3 +31,11 @@
 .animate-fade-in {
     animation: fade-in 0.4s ease-out;
 }
+
+.bg-auth {
+    background-image:
+        linear-gradient(to right, rgba(233, 79, 55, .8), rgba(233, 79, 55, .8)),
+        url('../img/auth/world.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}

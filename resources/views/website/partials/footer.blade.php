@@ -4,7 +4,7 @@
         <div>
             <a
                 href="{{ route('website.pages.home') }}"
-                class="flex items-center space-x-1 font-semibold text-lg"
+                class="flex items-center space-x-1 font-medium text-lg"
             >
                 <!-- Icon -->
                 <i data-lucide="link" class="w-6 h-6 text-primary"></i>

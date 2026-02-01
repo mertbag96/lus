@@ -22,6 +22,27 @@ Route::name('website.')->group(function (): void {
             // Privacy Policy Page
             Route::get('privacy-policy', 'privacy')
                 ->name('privacy');
+
+            // Auth
+            Route::name('auth.')
+                ->middleware('guest')
+                ->group(function () {
+                    // Login Page
+                    Route::get('login', 'login')
+                        ->name('login');
+
+                    // Register Page
+                    Route::get('register', 'register')
+                        ->name('register');
+
+                    // Forget Password Page
+                    Route::get('forgot-password', 'forgotPassword')
+                        ->name('forgot-password');
+
+                    // Reset Password Page
+                    Route::get('reset-password', 'resetPassword')
+                        ->name('reset-password');
+                });
         });
 
     // Contact

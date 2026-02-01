@@ -22,17 +22,30 @@
             </style>
         @endif
     </head>
-    <body class="w-[92%] sm:w-[82%] lg:w-[72%] xl:w-[62%] mx-auto bg-light font-sans antialiased">
-        <!-- Header -->
-        @include('website.partials.header')
-
+    <body class="font-sans antialiased">
         <!-- Main -->
-        <main class="flex flex-col space-y-4 py-4">
-            @yield('content')
-        </main>
+        <main class="w-full min-h-dvh flex flex-col justify-center items-center space-y-12">
+            <!-- Title -->
+            <h1 class="font-semibold text-2xl text-primary text-center">
+                Welcome to Dashboard!
+            </h1>
 
-        <!-- Footer -->
-        @include('website.partials.footer')
+            <!-- Form -->
+            <form
+                method="POST"
+                action="{{ route('auth.logout') }}"
+            >
+                @csrf
+
+                <!-- Submit-->
+                <button
+                    type="submit"
+                    class="bg-primary py-2 px-4 rounded-lg text-white hover:bg-red-600 transition-colors duration-200 cursor-pointer"
+                >
+                    Log out
+                </button>
+            </form>
+        </main>
     </body>
 
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>

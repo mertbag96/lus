@@ -45,5 +45,17 @@ $(function () {
             $(this).find('span').text('–');
         }
     });
+
+    // Password Visibility Togglers
+    $(document).on('click', '.password-eye, .password-eye-off', function () {
+        const wrapper = $(this).closest('.relative');
+        const input = wrapper.find('.password-input');
+        const isPassword = input.attr('type') === 'password';
+
+        input.attr('type', isPassword ? 'text' : 'password');
+
+        wrapper.find('.password-eye').toggleClass('hidden', isPassword);
+        wrapper.find('.password-eye-off').toggleClass('hidden', !isPassword);
+    });
 });
 

@@ -1,0 +1,106 @@
+@extends('website.layouts.auth')
+
+@section('title', 'Reset your password and continue managing your URLs')
+
+@section('form-title', 'Reset your password')
+
+@section('form-description', 'Please reset your password by entering a strong password')
+
+@section('form')
+    <form
+        action="#"
+        class="w-[94%] sm:w-[400px] md:w-[320px] lg:w-[420px] flex flex-col space-y-4 text-dark/90"
+    >
+        @csrf
+        <!-- Password -->
+        <div class="flex flex-col space-y-2 text-sm">
+            <!-- Label -->
+            <label for="password">
+                Password
+            </label>
+
+            <!-- Input & Password Visibility Togglers -->
+            <div class="w-full relative">
+                <!-- Input -->
+                <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    class="password-input w-full border border-dark/20 rounded-lg shadow-sm px-3 py-2 focus:outline placeholder:leading-8"
+                    placeholder="•••••••••••"
+                    required
+                >
+
+                <!-- Show Password -->
+                <i
+                    data-lucide="eye"
+                    class="password-eye absolute top-2.5 right-2.5 w-5 h-5 text-dark/50 hover:text-primary/90 cursor-pointer transition duration-200"
+                ></i>
+
+                <!-- Hide Password -->
+                <i
+                    data-lucide="eye-off"
+                    class="password-eye-off hidden absolute top-2.5 right-2.5 w-5 h-5 text-dark/50 hover:text-primary/90 cursor-pointer transition duration-200"
+                ></i>
+            </div>
+        </div>
+
+        <!-- Password Confirmation -->
+        <div class="flex flex-col space-y-2 text-sm">
+            <!-- Label -->
+            <label for="password-confirmation">
+                Password Confirmation
+            </label>
+
+            <!-- Input & Password Visibility Togglers -->
+            <div class="w-full relative">
+                <!-- Input -->
+                <input
+                    type="password"
+                    name="password_confirmation"
+                    id="password-confirmation"
+                    class="password-input w-full border border-dark/20 rounded-lg shadow-sm px-3 py-2 focus:outline placeholder:leading-8"
+                    placeholder="•••••••••••"
+                    required
+                >
+
+                <!-- Show Password -->
+                <i
+                    data-lucide="eye"
+                    class="password-eye absolute top-2.5 right-2.5 w-5 h-5 text-dark/50 hover:text-primary/90 cursor-pointer transition duration-200"
+                ></i>
+
+                <!-- Hide Password -->
+                <i
+                    data-lucide="eye-off"
+                    class="password-eye-off hidden absolute top-2.5 right-2.5 w-5 h-5 text-dark/50 hover:text-primary/90 cursor-pointer transition duration-200"
+                ></i>
+            </div>
+        </div>
+
+        <!-- Submit -->
+        <div class="text-sm">
+            <!-- Button -->
+            <button
+                type="submit"
+                class="w-full bg-primary hover:bg-red-600 rounded-lg p-2.5 font-medium text-center text-white cursor-pointer transition-colors duration-200"
+            >
+                Reset Password
+            </button>
+        </div>
+
+        <!-- Contact -->
+        <div class="mt-4 flex justify-center items-center space-x-1 text-sm">
+            <p class="text-dark/90">
+                Do you need help?
+            </p>
+
+            <a
+                href="{{ route('website.contact.show') }}"
+                class="text-primary hover:underline"
+            >
+                Contact us
+            </a>
+        </div>
+    </form>
+@endsection
