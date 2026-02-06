@@ -3,10 +3,9 @@
     <div class="px-4 py-12 bg-white border border-dark/20 rounded-lg shadow-sm flex flex-col justify-center items-center text-center space-y-4">
         <!-- Welcome -->
         <div class="flex flex-col justify-center items-center space-y-4">
-            <!-- Title -->
-            <h1 class="text-xl md:text-3xl text-primary">
+            <x-ui.title :level="1" class="text-xl md:text-3xl text-primary">
                 Welcome to {{ config('app.name') ?? 'LUS' }}
-            </h1>
+            </x-ui.title>
 
             <!-- Description -->
             <p class="w-full xs:w-[90%] sm:w-3/4 xl:w-full text-dark text-center">
@@ -33,31 +32,18 @@
                 required
             />
 
-            @error('url')
-                <small class="text-xs text-primary text-left animate-fade-in">
-                    {{ $message }}
-                </small>
-            @enderror
+            <x-ui.error name="url" class="text-left animate-fade-in" />
 
-            <!-- Button -->
-            <button
-                type="submit"
-                class="w-full p-3 bg-primary border border-dark/10 rounded-lg shadow-sm text-md text-white hover:bg-red-600 transition-colors duration-300 cursor-pointer"
-            >
+            <x-ui.button type="submit" fullWidth class="p-3 border border-dark/10 text-md">
                 Shorten URL
-            </button>
+            </x-ui.button>
 
             @if (session('short_url'))
                 <div class="border-2 border-green-300 bg-green-200 shadow-xs rounded-lg flex flex-col lg:flex-row justify-center items-center gap-2 p-4 text-green-700">
                     <span>Shortened URL:</span>
-
-                    <a
-                        target="_blank"
-                        href="{{ session('short_url') }}"
-                        class="font-medium underline"
-                    >
+                    <x-ui.link href="{{ session('short_url') }}" external class="font-medium underline">
                         {{ session('short_url') }}
-                    </a>
+                    </x-ui.link>
                 </div>
             @endif
         </form>

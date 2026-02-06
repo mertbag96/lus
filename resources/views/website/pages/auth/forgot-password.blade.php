@@ -27,29 +27,13 @@
             >
         </div>
 
-        <!-- Submit -->
         <div class="text-sm">
-            <!-- Button -->
-            <button
-                type="submit"
-                class="w-full bg-primary hover:bg-red-600 rounded-lg p-2.5 font-medium text-center text-white cursor-pointer transition-colors duration-200"
-            >
-                Send Reset Link
-            </button>
+            <x-ui.button type="submit" fullWidth>Send Reset Link</x-ui.button>
         </div>
 
-        <!-- Sign In -->
         <div class="mt-4 flex justify-center items-center space-x-1 text-sm">
-            <p class="text-dark/90">
-                Do you remember your password?
-            </p>
-
-            <a
-                href="{{ route('website.pages.auth.login') }}"
-                class="text-primary hover:underline"
-            >
-                Sign in
-            </a>
+            <p class="text-dark/90">Do you remember your password?</p>
+            <x-ui.link href="{{ route('website.pages.auth.login') }}">Sign in</x-ui.link>
         </div>
     </form>
 </x-website.layouts.auth>

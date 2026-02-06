@@ -1,33 +1,19 @@
 <footer class="mb-4 px-6 py-4 rounded-lg shadow-sm bg-white border border-dark/20 text-primary">
     <div class="flex justify-between items-center">
-        <!-- Logo -->
         <div>
-            <a href="{{ route('website.pages.home') }}" class="flex items-center space-x-1 font-medium text-lg">
-                <!-- Icon -->
-                <i data-lucide="link" class="w-6 h-6 text-primary"></i>
-
-                <!-- Text -->
-                <span>
-                    {{ config('app.name') ?? 'LUS' }}
-                </span>
+            <x-ui.logo />
         </div>
 
-        <!-- Navigation -->
         <nav class="flex items-center space-x-6 text-sm">
-            <!-- Terms of Use -->
-            <a target="_blank" href="{{ route('website.pages.terms') }}" class="hover:underline">
+            <x-ui.link href="{{ route('website.pages.terms') }}" external>
                 Terms of Use
-            </a>
-
-            <!-- Privacy Policy -->
-            <a target="_blank" href="{{ route('website.pages.privacy') }}" class="hover:underline">
+            </x-ui.link>
+            <x-ui.link href="{{ route('website.pages.privacy') }}" external>
                 Privacy Policy
-            </a>
-
-            <!-- Contact -->
-            <a href="{{ route('website.contact.show') }}" class="hover:underline">
+            </x-ui.link>
+            <x-ui.link href="{{ route('website.contact.show') }}">
                 Contact
-            </a>
+            </x-ui.link>
         </nav>
     </div>
 </footer>

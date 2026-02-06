@@ -1,8 +1,5 @@
 <div class="py-8 space-y-4">
-    <!-- Title -->
-    <h1 class="text-primary text-xl text-center">
-        Frequently Asked Questions
-    </h1>
+    <x-ui.title :level="1" variant="faq" align="center">Frequently Asked Questions</x-ui.title>
 
     <!-- Item 1 -->
     <div class="faq-item bg-white border border-dark/10 rounded-lg shadow-sm overflow-hidden">

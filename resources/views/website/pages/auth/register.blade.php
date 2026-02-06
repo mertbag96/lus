@@ -11,14 +11,8 @@
     >
         @csrf
 
-        <!-- Name -->
         <div class="flex flex-col space-y-2 text-sm">
-            <!-- Label -->
-            <label for="name">
-                Name
-            </label>
-
-            <!-- Input -->
+            <label for="name">Name</label>
             <input
                 type="text"
                 name="name"
@@ -30,22 +24,11 @@
                 required
             >
 
-            <!-- Error -->
-            @error('name')
-                <small class="text-xs text-primary">
-                    {{ $message }}
-                </small>
-            @enderror
+            <x-ui.error name="name" />
         </div>
 
-        <!-- Email -->
         <div class="flex flex-col space-y-2 text-sm">
-            <!-- Label -->
-            <label for="email">
-                Email address
-            </label>
-
-            <!-- Input -->
+            <label for="email">Email address</label>
             <input
                 type="email"
                 name="email"
@@ -56,25 +39,12 @@
                 maxlength="255"
                 required
             >
-
-            <!-- Error -->
-            @error('email')
-                <small class="text-xs text-primary">
-                    {{ $message }}
-                </small>
-            @enderror
+            <x-ui.error name="email" />
         </div>
 
-        <!-- Password -->
         <div class="flex flex-col space-y-2 text-sm">
-            <!-- Label -->
-            <label for="password">
-                Password
-            </label>
-
-            <!-- Input & Password Visibility Togglers -->
+            <label for="password">Password</label>
             <div class="w-full relative flex flex-col space-y-2">
-                <!-- Input -->
                 <input
                     type="password"
                     name="password"
@@ -84,13 +54,7 @@
                     maxlength="255"
                     required
                 >
-
-                <!-- Error -->
-                @error('password')
-                    <small class="text-xs text-primary">
-                        {{ $message }}
-                    </small>
-                @enderror
+                <x-ui.error name="password" />
 
                 <!-- Show Password -->
                 <i
@@ -126,11 +90,7 @@
                     required
                 >
 
-                @error('password_confirmation')
-                    <small class="text-xs text-primary">
-                        {{ $message }}
-                    </small>
-                @enderror
+                <x-ui.error name="password_confirmation" />
 
                 <!-- Show Password -->
                 <i
@@ -158,57 +118,23 @@
                 required
             >
 
-            <!-- Label -->
             <label for="accept">
                 I agree to the
-                <a
-                    target="_blank"
-                    href="{{ route('website.pages.terms') }}"
-                    class="text-primary hover:underline"
-                >
-                    Terms of Use
-                </a>
+                <x-ui.link href="{{ route('website.pages.terms') }}" external>Terms of Use</x-ui.link>
                 and
-                <a
-                    target="_blank"
-                    href="{{ route('website.pages.privacy') }}"
-                    class="text-primary hover:underline"
-                >
-                    Privacy Policy
-                </a>
+                <x-ui.link href="{{ route('website.pages.privacy') }}" external>Privacy Policy</x-ui.link>
             </label>
         </div>
 
-        <!-- Error -->
-        @error('accept')
-            <p class="text-xs text-red-500 -mt-1">
-                {{ $message }}
-            </p>
-        @enderror
+        <x-ui.error name="accept" class="block text-xs text-primary -mt-1" />
 
-        <!-- Submit -->
         <div class="text-sm">
-            <!-- Button -->
-            <button
-                type="submit"
-                class="w-full bg-primary hover:bg-red-600 rounded-lg p-2.5 font-medium text-center text-white cursor-pointer transition-colors duration-200"
-            >
-                Create Account
-            </button>
+            <x-ui.button type="submit" fullWidth>Create Account</x-ui.button>
         </div>
 
-        <!-- Sign In -->
         <div class="mt-4 flex justify-center items-center space-x-1 text-sm">
-            <p class="text-dark/90">
-                Already have an account?
-            </p>
-
-            <a
-                href="{{ route('website.pages.auth.login') }}"
-                class="text-primary hover:underline"
-            >
-                Sign in
-            </a>
+            <p class="text-dark/90">Already have an account?</p>
+            <x-ui.link href="{{ route('website.pages.auth.login') }}">Sign in</x-ui.link>
         </div>
     </form>
 </x-website.layouts.auth>

@@ -74,29 +74,13 @@
             </div>
         </div>
 
-        <!-- Submit -->
         <div class="text-sm">
-            <!-- Button -->
-            <button
-                type="submit"
-                class="w-full bg-primary hover:bg-red-600 rounded-lg p-2.5 font-medium text-center text-white cursor-pointer transition-colors duration-200"
-            >
-                Reset Password
-            </button>
+            <x-ui.button type="submit" fullWidth>Reset Password</x-ui.button>
         </div>
 
-        <!-- Contact -->
         <div class="mt-4 flex justify-center items-center space-x-1 text-sm">
-            <p class="text-dark/90">
-                Do you need help?
-            </p>
-
-            <a
-                href="{{ route('website.contact.show') }}"
-                class="text-primary hover:underline"
-            >
-                Contact us
-            </a>
+            <p class="text-dark/90">Do you need help?</p>
+            <x-ui.link href="{{ route('website.contact.show') }}">Contact us</x-ui.link>
         </div>
     </form>
 </x-website.layouts.auth>

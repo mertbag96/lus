@@ -3,18 +3,8 @@
 <div class="w-1/2 p-4 hidden lg:block">
     <!-- Box -->
     <div class="bg-auth w-full h-full px-20 rounded-lg shadow-sm flex flex-col justify-center space-y-8 lg:space-y-12">
-        <!-- Logo -->
         <div>
-            <a href="{{ route('website.pages.home') }}"
-                class="flex items-center space-x-1 font-medium text-2xl text-white">
-                <!-- Icon -->
-                <i data-lucide="link" class="w-8 h-8"></i>
-
-                <!-- Text -->
-                <span>
-                    {{ config('app.name') ?? 'LUS' }}
-                </span>
-            </a>
+            <x-ui.logo variant="light" size="md" />
         </div>
 
         <!-- Title & Description -->
