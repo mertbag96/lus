@@ -1,8 +1,4 @@
-@extends('website.layouts.app')
-
-@section('title', 'Contact')
-
-@section('content')
+<x-website.layouts.app title="Contact">
     <!-- Contact -->
     <div class="py-8 flex flex-col justify-center items-center">
         <!-- Title -->
@@ -18,7 +14,6 @@
             method="POST"
             action="{{ route('website.contact.store') }}"
             class="w-full lg:w-[85%] space-y-4 bg-white border border-dark/20 p-6 rounded-lg shadow-sm text-dark/90"
-            novalidate
         >
             @csrf
 
@@ -131,5 +126,5 @@
     </div>
 
     <!-- FAQ -->
-    @include('website.partials.faq')
-@endsection
+    <x-website.partials.faq />
+</x-website.layouts.app>

@@ -2,10 +2,7 @@
     <div class="flex justify-between items-center">
         <!-- Logo -->
         <div>
-            <a
-                href="{{ route('website.pages.home') }}"
-                class="flex items-center space-x-1 font-medium text-lg"
-            >
+            <a href="{{ route('website.pages.home') }}" class="flex items-center space-x-1 font-medium text-lg">
                 <!-- Icon -->
                 <i data-lucide="link" class="w-6 h-6 text-primary"></i>
 
@@ -19,27 +16,20 @@
         <!-- Navigation -->
         <nav class="flex items-center space-x-6 text-sm">
             <!-- Contact -->
-            <a
-                href="{{ route('website.contact.show') }}"
-                class="hidden sm:block hover:underline"
-            >
+            <a href="{{ route('website.contact.show') }}" class="hidden sm:block hover:underline">
                 Contact
             </a>
 
             @auth
                 <!-- Dashboard -->
-                <a
-                    href="{{ route('panel.dashboard') }}"
-                    class="bg-primary py-1 px-2 rounded-lg text-white hover:bg-red-600 transition-colors duration-200"
-                >
+                <a href="{{ route('panel.dashboard') }}"
+                    class="bg-primary py-1 px-2 rounded-lg text-white hover:bg-red-600 transition-colors duration-200">
                     Dashboard
                 </a>
             @else
                 <!-- Get Started -->
-                <a
-                    href="{{ route('website.pages.auth.login') }}"
-                    class="bg-primary py-1 px-2 rounded-lg text-white hover:bg-red-600 transition-colors duration-200"
-                >
+                <a href="{{ route('website.pages.auth.login') }}"
+                    class="bg-primary py-1 px-2 rounded-lg text-white hover:bg-red-600 transition-colors duration-200">
                     Get Started
                 </a>
             @endauth

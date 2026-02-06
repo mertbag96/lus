@@ -1,3 +1,5 @@
+@props(['title', 'formTitle', 'formDescription'])
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -6,8 +8,7 @@
 
         <!-- Title -->
         <title>
-            {{ config('app.name', 'LUS') }} -
-            @yield('title')
+            {{ config('app.name', 'LUS') }} - {{ $title }}
         </title>
 
         <!-- Favicon -->
@@ -22,17 +23,23 @@
             </style>
         @endif
     </head>
-    <body class="w-[92%] sm:w-[82%] lg:w-[72%] xl:w-[62%] mx-auto bg-light font-sans antialiased">
-        <!-- Header -->
-        @include('website.partials.header')
+    <body class="font-sans antialiased">
+        <!-- Main Content -->
+        <main class="w-full min-h-dvh flex">
+            <!-- Left -->
+            <x-website.partials.auth.left
+                title="Manage and monitor your links effortlessly."
+                description="Join thousands of users who trust us for their link management."
+            />
 
-        <!-- Main -->
-        <main class="flex flex-col space-y-4 py-4">
-            @yield('content')
+            <!-- Right -->
+            <x-website.partials.auth.right
+                :title="$formTitle"
+                :description="$formDescription"
+            >
+                {{ $slot }}
+            </x-website.partials.auth.right>
         </main>
-
-        <!-- Footer -->
-        @include('website.partials.footer')
     </body>
 
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>

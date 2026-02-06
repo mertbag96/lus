@@ -1,8 +1,4 @@
-@extends('website.layouts.app')
-
-@section('title', 'Terms of Use')
-
-@section('content')
+<x-website.layouts.app title="Terms of Use">
     <!-- Terms of Use -->
     <div class="p-8 bg-white border border-dark/20 rounded-lg shadow-sm text-dark/90 text-sm">
         <h1 class="text-2xl text-primary mb-4">Terms of Use</h1>
@@ -74,4 +70,4 @@
             for real-world usage or handling sensitive or personal data.
         </p>
     </div>
-@endsection
+</x-website.layouts.app>

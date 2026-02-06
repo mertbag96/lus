@@ -1,12 +1,8 @@
-@extends('website.layouts.auth')
-
-@section('title', 'Login to nanage your URLS')
-
-@section('form-title', 'Welcome back!')
-
-@section('form-description', 'Please enter your credentials to sign in')
-
-@section('form')
+<x-website.layouts.auth
+    title="Login to manage your URLs"
+    formTitle="Welcome back"
+    formDescription="Please enter your credentials to sign in"
+>
     <form
         method="POST"
         action="{{ route('auth.login') }}"
@@ -132,4 +128,4 @@
             </a>
         </div>
     </form>
-@endsection
+</x-website.layouts.auth>

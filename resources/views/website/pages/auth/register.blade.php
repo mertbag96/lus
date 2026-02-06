@@ -1,12 +1,8 @@
-@extends('website.layouts.auth')
-
-@section('title', 'Create an account to nanage your URLS')
-
-@section('form-title', 'Create an account')
-
-@section('form-description', 'Please enter your information to create an account')
-
-@section('form')
+<x-website.layouts.auth
+    title="Create an account to nanage your URLS"
+    formTitle="Create an account"
+    formDescription="Please enter your information to create an account"
+>
     <form
         method="POST"
         action="{{ route('auth.register') }}"
@@ -215,4 +211,4 @@
             </a>
         </div>
     </form>
-@endsection
+</x-website.layouts.auth>

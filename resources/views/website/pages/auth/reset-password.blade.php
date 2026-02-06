@@ -1,12 +1,8 @@
-@extends('website.layouts.auth')
-
-@section('title', 'Reset your password and continue managing your URLs')
-
-@section('form-title', 'Reset your password')
-
-@section('form-description', 'Please reset your password by entering a strong password')
-
-@section('form')
+<x-website.layouts.auth
+    title="Reset your password and continue managing your URLs"
+    formTitle="Reset your password"
+    formDescription="Please reset your password by entering a strong password"
+>
     <form
         action="#"
         class="w-[94%] sm:w-[400px] md:w-[320px] lg:w-[420px] flex flex-col space-y-4 text-dark/90"
@@ -103,4 +99,4 @@
             </a>
         </div>
     </form>
-@endsection
+</x-website.layouts.auth>

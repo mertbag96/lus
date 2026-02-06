@@ -1,8 +1,4 @@
-@extends('website.layouts.app')
-
-@section('title', 'Shorten your URLs in seconds for free')
-
-@section('content')
+<x-website.layouts.app title="Shorten your URLs in seconds for free">
     <!-- Hero -->
     <div class="px-4 py-12 bg-white border border-dark/20 rounded-lg shadow-sm flex flex-col justify-center items-center text-center space-y-4">
         <!-- Welcome -->
@@ -158,5 +154,5 @@
     </div>
 
     <!-- FAQ -->
-    @include('website.partials.faq')
-@endsection
+    <x-website.partials.faq />
+</x-website.layouts.app>
