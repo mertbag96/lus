@@ -1,7 +1,7 @@
 @props([
     'type' => 'submit',
     'variant' => 'primary',
-    'fullWidth' => false,
+    'fullWidth' => false
 ])
 
 @php

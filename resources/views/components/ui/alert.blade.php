@@ -1,6 +1,4 @@
-@props([
-    'type' => 'success',
-])
+@props(['type' => 'success'])
 
 @php
     $typeClass = match ($type) {

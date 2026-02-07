@@ -1,23 +1,27 @@
 <?php
 
-namespace App\View\Components\Website\Layouts;
+namespace App\View\Components\Ui;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class App extends Component
+class Button extends Component
 {
     /**
      * Create a new component instance.
      */
-    public function __construct(public string $title) {}
+    public function __construct(
+        public string $type = 'submit',
+        public string $variant = 'primary',
+        public bool $fullWidth = false
+    ) {}
 
     /**
      * Get the view / contents that represent the component.
      */
     public function render(): View|Closure|string
     {
-        return view('components.website.layouts.app');
+        return view('components.ui.button');
     }
 }

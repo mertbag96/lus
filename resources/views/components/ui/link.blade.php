@@ -1,7 +1,7 @@
 @props([
     'href' => '#',
     'external' => false,
-    'variant' => 'default',
+    'variant' => 'default'
 ])
 
 @php

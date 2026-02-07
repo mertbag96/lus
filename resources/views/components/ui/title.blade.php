@@ -1,7 +1,7 @@
 @props([
     'level' => 1,
     'variant' => 'page',
-    'align' => 'left',
+    'align' => 'left'
 ])
 
 @php
