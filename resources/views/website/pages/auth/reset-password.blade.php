@@ -28,16 +28,18 @@
                 >
 
                 <!-- Show Password -->
-                <i
-                    data-lucide="eye"
-                    class="password-eye absolute top-2.5 right-2.5 w-5 h-5 text-dark/50 hover:text-primary/90 cursor-pointer transition duration-200"
-                ></i>
+                <x-ui.icon
+                    icon="eye"
+                    size="xs"
+                    class="password-eye absolute top-2.5 right-2.5 text-dark/50 hover:text-primary/90 cursor-pointer transition duration-200"
+                ></x-ui.icon>
 
                 <!-- Hide Password -->
-                <i
-                    data-lucide="eye-off"
-                    class="password-eye-off hidden absolute top-2.5 right-2.5 w-5 h-5 text-dark/50 hover:text-primary/90 cursor-pointer transition duration-200"
-                ></i>
+                <x-ui.icon
+                    icon="eye-off"
+                    size="xs"
+                    class="password-eye-off hidden absolute top-2.5 right-2.5 text-dark/50 hover:text-primary/90 cursor-pointer transition duration-200"
+                ></x-ui.icon>
             </div>
 
             <!-- Error Message -->
@@ -68,16 +70,18 @@
                 >
 
                 <!-- Show Password -->
-                <i
-                    data-lucide="eye"
-                    class="password-eye absolute top-2.5 right-2.5 w-5 h-5 text-dark/50 hover:text-primary/90 cursor-pointer transition duration-200"
-                ></i>
+                <x-ui.icon
+                    icon="eye"
+                    size="xs"
+                    class="password-eye absolute top-2.5 right-2.5 text-dark/50 hover:text-primary/90 cursor-pointer transition duration-200"
+                ></x-ui.icon>
 
                 <!-- Hide Password -->
-                <i
-                    data-lucide="eye-off"
-                    class="password-eye-off hidden absolute top-2.5 right-2.5 w-5 h-5 text-dark/50 hover:text-primary/90 cursor-pointer transition duration-200"
-                ></i>
+                <x-ui.icon
+                    icon="eye-off"
+                    size="xs"
+                    class="password-eye-off hidden absolute top-2.5 right-2.5 text-dark/50 hover:text-primary/90 cursor-pointer transition duration-200"
+                ></x-ui.icon>
             </div>
 
             <!-- Error Message -->
@@ -107,12 +111,12 @@
             </p>
 
             <!-- Link -->
-            <a
+            <x-ui.link
                 href="{{ route('website.contact.show') }}"
                 class="text-primary hover:underline"
             >
                 Contact us
-            </a>
+            </x-ui.link>
         </div>
     </form>
 </x-website.layouts.auth>

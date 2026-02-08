@@ -5,21 +5,21 @@
     <div class="bg-auth w-full h-full px-20 rounded-lg shadow-sm flex flex-col justify-center space-y-8 lg:space-y-12">
         <!-- Logo -->
         <div>
-            <a
+            <x-ui.link
                 href="{{ route('website.pages.home') }}"
                 class="flex items-center space-x-1 font-medium text-2xl text-white"
             >
                 <!-- Icon -->
-                <i
-                    data-lucide="link"
-                    class="w-8 h-8"
-                ></i>
+                <x-ui.icon
+                    icon="link"
+                    size="md"
+                ></x-ui.icon>
 
                 <!-- Text -->
                 <span>
                     {{ config('app.name') ?? 'LUS' }}
                 </span>
-            </a>
+            </x-ui.link>
         </div>
 
         <!-- Title & Description -->
@@ -41,10 +41,11 @@
             <div class="flex items-start space-x-2">
                 <!-- Icon -->
                 <div class="bg-white p-2 rounded-lg">
-                    <i
-                        data-lucide="smile"
-                        class="w-6 h-6 text-primary"
-                    ></i>
+                    <x-ui.icon
+                        icon="smile"
+                        size="md"
+                        class="text-primary"
+                    ></x-ui.icon>
                 </div>
 
                 <!-- Title & Description -->
@@ -66,10 +67,11 @@
             <div class="flex items-start space-x-2">
                 <!-- Icon -->
                 <div class="bg-white p-2 rounded-lg">
-                    <i
-                        data-lucide="zap"
-                        class="w-6 h-6 text-primary"
-                    ></i>
+                    <x-ui.icon
+                        icon="zap"
+                        size="md"
+                        class="text-primary"
+                    ></x-ui.icon>
                 </div>
 
                 <!-- Title & Description -->
@@ -92,10 +94,11 @@
             <div class="flex items-start space-x-2">
                 <!-- Icon -->
                 <div class="bg-white p-2 rounded-lg">
-                    <i
-                        data-lucide="zap"
-                        class="w-6 h-6 text-primary"
-                    ></i>
+                    <x-ui.icon
+                        icon="shield-check"
+                        size="md"
+                        class="text-primary"
+                    ></x-ui.icon>
                 </div>
 
                 <!-- Title & Description -->

@@ -3,21 +3,21 @@
 <div class="w-full lg:w-1/2 p-8 flex flex-col justify-center items-center space-y-6 sm:space-y-8">
     <!-- Logo -->
     <div class="block lg:hidden">
-        <a
+        <x-ui.link
             href="{{ route('website.pages.home') }}"
             class="flex items-center space-x-1 font-medium text-3xl text-primary"
         >
             <!-- Icon -->
-            <i
-                data-lucide="link"
-                class="w-10 h-10"
-            ></i>
+            <x-ui.icon
+                icon="link"
+                size="md"
+            ></x-ui.icon>
 
             <!-- Text -->
             <span>
                 {{ config('app.name') ?? 'LUS' }}
             </span>
-        </a>
+        </x-ui.link>
     </div>
 
     <!-- Title & Description -->

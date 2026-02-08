@@ -1,50 +1,47 @@
-<header class="mt-4 px-6 py-4 rounded-lg shadow-md bg-white border border-dark/20 text-primary z-50">
+<header class="mt-4 px-6 py-4 rounded-lg shadow-sm bg-white border border-dark/10 text-primary z-50">
     <div class="flex justify-between items-center">
         <!-- Logo -->
         <div>
-            <a
-                href="{{ route('website.pages.home') }}"
-                class="flex items-center space-x-1 font-medium text-lg"
+            <x-ui.link
+                :href="route('website.pages.home')"
+                class="flex items-center space-x-1 font-medium text-lg text-primary"
             >
                 <!-- Icon -->
-                <i
-                    data-lucide="link"
-                    class="w-6 h-6 text-primary"
-                ></i>
+                <x-ui.icon icon="link"></x-ui.icon>
 
                 <!-- Text -->
                 <span>
                     {{ config('app.name') ?? 'LUS' }}
                 </span>
-            </a>
+            </x-ui.link>
         </div>
 
         <!-- Navigation -->
         <nav class="flex items-center space-x-6 text-sm">
             <!-- Contact -->
-            <a
+            <x-ui.link
                 href="{{ route('website.contact.show') }}"
                 class="hidden sm:block hover:underline"
             >
                 Contact
-            </a>
+            </x-ui.link>
 
             @auth
                 <!-- Dashboard -->
-                <a
+                <x-ui.link
                     href="{{ route('panel.dashboard') }}"
                     class="bg-primary py-1 px-2 rounded-lg text-white hover:bg-red-600 transition-colors duration-200"
                 >
                     Dashboard
-                </a>
+                </x-ui.link>
             @else
                 <!-- Get Started -->
-                <a
+                <x-ui.link
                     href="{{ route('website.pages.auth.login') }}"
                     class="bg-primary py-1 px-2 rounded-lg text-white hover:bg-red-600 transition-colors duration-200"
                 >
                     Get Started
-                </a>
+                </x-ui.link>
             @endauth
         </nav>
     </div>

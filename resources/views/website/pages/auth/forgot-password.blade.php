@@ -53,12 +53,12 @@
             </p>
 
             <!-- Link -->
-            <a
+            <x-ui.link
                 href="{{ route('website.pages.auth.login') }}"
                 class="text-primary hover:underline"
             >
                 Sign in
-            </a>
+            </x-ui.link>
         </div>
     </form>
 </x-website.layouts.auth>

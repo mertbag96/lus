@@ -13,7 +13,7 @@
         <form
             method="POST"
             action="{{ route('website.contact.store') }}"
-            class="w-full lg:w-[85%] space-y-4 bg-white border border-dark/20 p-6 rounded-lg shadow-sm text-dark/90"
+            class="w-full lg:w-[85%] space-y-4 bg-white border border-dark/10 p-6 rounded-lg shadow-sm text-dark/90"
         >
             @csrf
 
@@ -130,5 +130,5 @@
     </div>
 
     <!-- FAQ -->
-    <x-website.partials.faq />
+    <x-website.partials.faq title="Frequently Asked Questions" />
 </x-website.layouts.app>
