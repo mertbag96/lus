@@ -22,11 +22,11 @@
             </style>
         @endif
     </head>
-    <body class="font-sans antialiased">
+    <body class="bg-light font-sans antialiased">
         <!-- Main -->
         <main class="w-full min-h-dvh flex flex-col justify-center items-center space-y-12">
             <!-- Title -->
-            <h1 class="text-2xl text-primary text-center">
+            <h1 class="text-4xl text-primary text-center">
                 Welcome to Dashboard!
             </h1>
 
@@ -40,7 +40,7 @@
                 <!-- Submit-->
                 <button
                     type="submit"
-                    class="bg-primary py-2 px-4 rounded-lg text-white hover:bg-red-600 transition-colors duration-200 cursor-pointer"
+                    class="bg-primary py-2 px-4 rounded-lg text-lg text-white hover:bg-red-600 transition-colors duration-200 cursor-pointer"
                 >
                     Log out
                 </button>
